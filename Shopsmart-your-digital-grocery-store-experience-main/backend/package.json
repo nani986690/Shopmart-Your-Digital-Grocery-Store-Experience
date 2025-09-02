@@ -1,0 +1,31 @@
+// backend/server.js
+require('dotenv').config();
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/shopsmart';
+const mongoose = require('mongoose');
+mongoose.connect(MONGO_URI).then(()=>console.log('✅ MongoDB connected')).catch(console.error);
+MONGO_URI=mongodb+srv://<user>:<pass>@<cluster>/<db>?retryWrites=true&w=majority
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "MONGO_URI": "mongodb+srv://<USER>:<PASS>@<CLUSTER>.mongodb.net/shopsmart?retryWrites=true&w=majority&appName=<APPNAME>",
+  "scripts": {
+    "seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.0"
+  },
+  "description": ""
+}
